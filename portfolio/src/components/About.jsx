@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 function About() {
   return (
@@ -43,7 +43,7 @@ function About() {
         </div>
 
         <div className="home-img">
-          <img src="../public/assets/image.jpg" alt="" />
+          <img src="assets/image.jpg" alt="" />
         </div>
       </section>
     </>

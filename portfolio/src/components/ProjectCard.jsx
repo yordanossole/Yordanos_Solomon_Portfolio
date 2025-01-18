@@ -4,12 +4,12 @@ function ProjectCard() {
   return (
     <>
       {" "}
-      <section className="services" id="services">
-        <h2 className="heading">Services</h2>
+      <section className="projects" id="projects">
+        <h2 className="heading">Projects</h2>
 
-        <div className="services-container">
-          <div className="service-box">
-            <div className="service-info">
+        <div className="projects-container">
+          <div className="project-box">
+            <div className="project-info">
               <h4>UI Design</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
@@ -20,8 +20,8 @@ function ProjectCard() {
             </div>
           </div>
 
-          <div className="service-box">
-            <div className="service-info">
+          <div className="project-box">
+            <div className="project-info">
               <h4>Frontend Development</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
@@ -32,8 +32,8 @@ function ProjectCard() {
             </div>
           </div>
 
-          <div className="service-box">
-            <div className="service-info">
+          <div className="project-box">
+            <div className="project-info">
               <h4>Backend Development</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
@@ -44,8 +44,8 @@ function ProjectCard() {
             </div>
           </div>
 
-          <div className="service-box">
-            <div className="service-info">
+          <div className="project-box">
+            <div className="project-info">
               <h4>Testing</h4>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam
