@@ -1,4 +1,4 @@
-// import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const handleMenuIconClick = () => {
@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <a href="#" className="logo">
+        <a href="/" className="logo">
           Amelia <span>Morgan</span>
         </a>
         <i
@@ -24,13 +24,24 @@ function Header() {
         ></i>
 
         <nav className="navbar">
-          <a href="#home" className="active">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
             Home
-          </a>
-          <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
-          <a href="#testimonials">Testimonials</a>
-          <a href="#contact">Contact</a>
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Projects
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
         </nav>
       </header>
     </>
