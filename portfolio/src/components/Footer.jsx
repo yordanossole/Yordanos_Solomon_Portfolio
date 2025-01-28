@@ -1,4 +1,3 @@
-// import React from "react";
 
 function Footer() {
   return (
@@ -37,7 +36,7 @@ function Footer() {
           </li>
         </ul>
 
-        <p className="copyright">© Amelia Morgan | All Rights Reserved</p>
+        <p className="copyright">© Yordanos Solomon | All Rights Reserved</p>
       </footer>
     </>
   );

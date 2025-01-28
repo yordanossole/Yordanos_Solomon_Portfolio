@@ -13,7 +13,6 @@ function ProjectCard({ status, name, description, language, link, id }) {
 
   return (
     <div className="project-box">
-      {/* <div className="project-info"> */}
       <h4>{status || name}</h4>
       <p>{description}</p>
       <div>
@@ -22,12 +21,11 @@ function ProjectCard({ status, name, description, language, link, id }) {
             More
           </a>
         </p>
-        <p>Language: {language}</p>
+        <p id="lang">{language}</p>
         <p>
           {likeCount} <i className="bx bxs-like" onClick={handleLikeClick}></i>{" "}
         </p>
       </div>
-      {/* </div> */}
     </div>
   );
 }
@@ -42,10 +40,3 @@ ProjectCard.propTypes = {
 };
 
 export default ProjectCard;
-
-// needs:
-// working on Project, and github
-// testimonial Animation
-// dark mode
-// changing data
-// 2.1, 5, 7.2, 9

@@ -59,7 +59,6 @@ function Contact() {
 
     // Validate form inputs
     if (validateForm()) {
-      // Perform the form submission via Getform API
       setSubmitStatus("Submitting...");
 
       // Standard form submission to Getform.io
@@ -102,6 +101,8 @@ function Contact() {
         >
           <div className="input-group">
             <div className="input-box">
+              {/* Display submission status */}
+              {submitStatus && <p className="submit-status">{submitStatus}</p>}
               <input
                 type="text"
                 name="name"
@@ -127,19 +128,17 @@ function Contact() {
             </div>
           </div>
 
-          <div className="input-group-2">
+          <div className="input-group-2 input-box">
             <textarea
               name="message"
               id=""
               cols="30"
-              rows="12"
+              rows="10"
               placeholder="Your Message"
               onChange={handleChange}
             />
-            {errors.message && <p className="error">{errors.message}</p>}
+            {errors.message && <span className="error">{errors.message}</span>}
             <input type="submit" value="Send Message" className="btn" />
-            {/* Display submission status */}
-            {submitStatus && <p className="submit-status">{submitStatus}</p>}
           </div>
         </form>
       </section>
@@ -148,51 +147,3 @@ function Contact() {
 }
 
 export default Contact;
-
-// const [email, setEmail] = useState("");
-// const [message, setMessage] = useState("");
-// const [errors, setErrors] = useState({});
-
-// const handleInputChange = (e) => {
-//   const { name, value } = e.target;
-//   if (name === "email") {
-//     setEmail(value);
-//   } else if (name === "message") {
-//     setMessage(value);
-//   }
-// };
-
-// const validateForm = () => {
-//   const newErrors = {};
-
-//   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-//   if (!email || !emailRegex.test(email)) {
-//     newErrors.email = "Please enter a valid email address.";
-//   }
-//   if (!email) {
-//     newErrors.email = "Email is required.";
-//   }
-//   if (!message) {
-//     newErrors.message = "Message is required.";
-//   }
-
-//   const wordCount = message
-//     .split(/\s+/)
-//     .filter((word) => word.length > 0).length;
-//   if (wordCount > 500) {
-//     newErrors.message = "Message cannot exceed 500 words.";
-//   }
-
-//   setErrors(newErrors);
-//   return Object.keys(newErrors).length === 0;
-// };
-
-// const handleSubmit = (e) => {
-//   e.preventDefault();
-
-//   if (validateForm()) {
-//     alert("Form submitted successfully!");
-//   } else {
-//     alert("Please fix the errors.");
-//   }
-// };

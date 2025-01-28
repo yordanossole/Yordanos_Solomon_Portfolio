@@ -1,4 +1,3 @@
-// import React from "react";
 import PropTypes from "prop-types";
 
 function TestimonialCard({ name, image, rating, text }) {
@@ -36,10 +35,10 @@ function TestimonialCard({ name, image, rating, text }) {
 
 // Define PropTypes for validation
 TestimonialCard.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   image: PropTypes.string,
-  rating: PropTypes.number.isRequired,
-  text: PropTypes.string.isRequired,
+  rating: PropTypes.number,
+  text: PropTypes.string,
 };
 
 export default TestimonialCard;
