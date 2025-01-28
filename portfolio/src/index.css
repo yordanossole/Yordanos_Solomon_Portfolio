@@ -21,7 +21,6 @@
   --main-color: #00ffee;
 } */
 
-
 html {
   font-size: 60%;
   overflow-x: hidden;
@@ -364,6 +363,7 @@ span {
 }
 
 /* projects */
+/*
 .projects {
   background: var(--bg-color);
   color: black;
@@ -380,7 +380,7 @@ span {
 }
 .project-box {
   background-color: var(--main-color);
-  height: 300px;
+  height: 250px;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
@@ -397,22 +397,29 @@ span {
   flex-direction: column;
   text-align: left;
   max-height: 200px;
-  justify-content: left;
+  justify-content: space-around;
   align-items: baseline;
-  padding: 5rem 5rem;
+  /* padding: 5rem 5rem; *
+  padding: 2rem 2rem;
 }
 .project-info h4 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 2;
 }
 .project-info p {
   font-size: 1.6rem;
   font-weight: 600;
-  max-height: 100px;
-  line-height: 1.7;
-  margin: auto;
+  /* max-height: 100px; */
+line-height: 1.7;
+/* margin: auto; *
 }
+.project-info div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 5rem;
+} */
 /* testimonials */
 .testimonials {
   background: var(--second-bg-color);
@@ -512,7 +519,16 @@ span {
 .contact form .btn {
   margin-top: 2rem;
 }
-
+.submit-status {
+  color: green;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 1rem;
+}
 /* footer */
 .footer {
   position: relative;
@@ -573,12 +589,159 @@ span {
   font-size: 16px;
   /* color: white; */
   color: var(--text-color);
-
 }
 /* 41:41 */
 
+/* skills */
+.skills {
+  background: var(--bg-color);
+  color: black;
+}
+.skills h2 {
+  margin-bottom: 5rem;
+  color: white;
+}
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.skill-box {
+  background-color: var(--main-color);
+  /* height: 200px; */
+  border-radius: 3rem;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.skill-box:hover {
+  background: white;
+  color: black;
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+/* .skill-box:hover .progress-bar-container {
+  transition: 0.5s ease;
+} */
+.skill-box:hover .progress-bar {
+  background-color: black;
+  transition: 0.5s ease;
+}
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* max-height: 200px;  */
+  justify-content: left;
+  /* align-items: baseline; */
+  padding: 2rem 2rem;
+}
+/* .skill-box h4 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 2;
+} */
+.skill-box p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* max-height: 100px; */
+  /* line-height: 1.7; */
+  /* margin: auto; */
+}
+
+.progress-container {
+  margin: 0.2rem 0;
+}
+.progress-bar-container {
+  background-color: white;
+  border-radius: 1rem;
+  height: 1.5rem;
+  border: 1px solid var(--main-color);
+  margin-top: 1rem;
+}
+.progress-bar {
+  background-color: black;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  color: #00ffee;
+  height: 100%;
+}
+#progress-title {
+  display: flex;
+  justify-content: space-between !important;
+}
+#progress-title p {
+  width: 100%;
+}
+#progress-percent {
+  text-align: end;
+}
+
+/**/
+/* projects */
+.projects {
+  background: var(--bg-color);
+  color: black;
+}
+.projects h2 {
+  margin-bottom: 5rem;
+  color: var(--text-color);
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+.project-box {
+  background-color: var(--main-color);
+  height: 200px;
+  border-radius: 3rem;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.project-box:hover {
+  background: white;
+  color: black;
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+}
+.project-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* max-height: 200px; */
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 3rem 3rem;
+}
+.project-box h4 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  /* line-height: 2; */
+  margin-bottom: 1rem;
+}
+.project-box p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* max-height: 100px; */
+  line-height: 1.7;
+}
+.project-box div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+.project-box a {
+  color: black;
+}
+/**/
+
 /* responsivenesa */
-@media(max-width:1285px) {
+@media (max-width: 1285px) {
   html {
     font-size: 55%;
   }
@@ -587,8 +750,13 @@ span {
     grid-template-columns: repeat(2, 1fr);
     margin: 0 5rem;
   }
+  .skill-container {
+    padding-bottom: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 5rem;
+  }
 }
-@media(max-width:991px) {
+@media (max-width: 991px) {
   header {
     padding: 2rem 3%;
   }
@@ -622,7 +790,7 @@ span {
     padding: 2rem 3%;
   }
 }
-@media(max-width:895px) {
+@media (max-width: 895px) {
   #menu-icon {
     display: block;
   }
@@ -646,7 +814,8 @@ span {
     display: block;
     font-size: 2rem;
     margin: 3rem 0;
-    color: white;
+    /* color: white; */
+    color: var(--text-color);
   }
   .home {
     flex-direction: column-reverse;
@@ -670,6 +839,12 @@ span {
     margin-bottom: 3rem;
   }
   .projects-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .skills h2 {
+    margin-bottom: 3rem;
+  }
+  .skills-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
