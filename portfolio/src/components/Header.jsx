@@ -11,7 +11,7 @@ function Header() {
     };
   };
 
-  let darkmode = localStorage.getItem("darkmode");
+  let darkmode = localStorage.getItem("darkmode") || "active";
 
   const enableDarkmode = () => {
     document.body.classList.add("darkmode");
@@ -40,7 +40,6 @@ function Header() {
           <div id="theme-switch" onClick={themeHandler}>
             <i className="fa-solid fa-moon"></i>
             <i className="fa-solid fa-sun"></i>
-           
           </div>
           <i
             className="bx bx-menu"
