@@ -39,10 +39,16 @@ function Project() {
       </section>
     );
 
-    const truncateTxt = (txt, maxSize) => {
-      return txt.length > maxSize ? txt.slice(0, maxSize) + '...' : txt;
-    };
+  const truncateTxt = (txt, maxSize) => {
+    if (txt) {
+      return txt.length > maxSize ? txt.slice(0, maxSize) + "..." : txt;
+    }
+  };
 
+  if (repos.length % 2 == 1) {
+    repos.pop();
+  }
+  
   return (
     <section className="projects" id="projects">
       <h2 className="heading">Projects</h2>
